@@ -1,27 +1,11 @@
 import React, { Component } from 'react';
 import Table from './Table.js';
+import Form from './Form.js';
 //import logo from './logo.svg';
 
 class App extends Component {
 	state = {
-		characters: [
-			{
-                'name': 'Charlie',
-                'job': 'Janitor'
-            },
-            {
-                'name': 'Galuh',
-                'job': 'Bouncer'
-            },
-            {
-                'name': 'Bosu',
-                'job': 'Aspring actress'
-            },
-            {
-                'name': 'Dennis',
-                'job': 'Bartender'
-            }
-		]
+		characters: []
 	};
 
 	removeCharacter = index => {
@@ -43,6 +27,7 @@ class App extends Component {
 					characterData={characters}
 					removeCharacter={this.removeCharacter}
 				/>
+				<Form />
 			</div>
 		);
 	}
